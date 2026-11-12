@@ -78,6 +78,20 @@ footer{background:var(--ink);color:#b7c3dd;padding:40px 0;font-size:14px}footer 
 .hero .grid,.cgrid,.contact .grid{grid-template-columns:1fr}.prods{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}
 .flow{grid-template-columns:repeat(3,1fr);row-gap:30px}.flow::before{display:none}section{padding:80px 0}.perks{grid-template-columns:1fr}}
 @media(max-width:520px){.prods,.stats{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}}
+.job .go small{display:block;color:var(--muted);font-weight:500;font-size:12px;text-align:right}
+.job.has-jd .badge{display:inline-block;margin-left:8px;font-size:11px;font-weight:600;color:var(--thread);background:#235bcc14;border-radius:999px;padding:2px 8px;vertical-align:middle}
+.modal{position:fixed;inset:0;z-index:100;background:#14244f8c;backdrop-filter:blur(4px);display:none;align-items:flex-start;justify-content:center;padding:40px 16px;overflow-y:auto}
+.modal.open{display:flex}body.lock{overflow:hidden}
+.mbox{position:relative;background:#fff;border-radius:22px;max-width:760px;width:100%;padding:36px 40px 28px;box-shadow:0 30px 80px -30px #14244f}
+.mbox h3{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:18px}
+.mx{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:22px;cursor:pointer;color:var(--ink)}
+.jdmeta{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--linen);border-radius:16px;padding:16px 18px;margin-bottom:8px}
+.jdmeta small{display:block;color:var(--muted);font-size:12px}.jdmeta b{font-size:14.5px}
+.jd h4{font-family:'Space Grotesk';font-size:19px;margin:24px 0 8px;padding-left:12px;border-left:3px solid var(--thread)}
+.jd h5{font-size:15.5px;margin:14px 0 4px}.jd p,.jd li{font-size:15px;color:#34405e}.jd ul{padding-left:20px}.jd li{margin:4px 0}
+.mfoot{position:sticky;bottom:-28px;background:#fff;margin:24px -40px -28px;padding:18px 40px 24px;border-top:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-radius:0 0 22px 22px}
+.mfoot span{font-size:13.5px;color:var(--muted)}
+@media(max-width:600px){.mbox{padding:28px 20px 20px}.mfoot{position:static;margin:20px -20px -20px;padding:16px 20px 20px}.jdmeta{grid-template-columns:1fr}}
 </style></head><body>
 <header><div class="wrap"><a href="#" class="logo"><img src="logo.png" alt="GETIFY" height="26"></a>
 <nav id="nav"><a href="#san-pham">Sản phẩm</a><a href="#linh-vuc">Lĩnh vực</a><a href="#nang-luc">Năng lực</a><a href="#tuyen-dung">Tuyển dụng</a><a href="#lien-he">Liên hệ</a></nav>
@@ -141,7 +155,7 @@ footer{background:var(--ink);color:#b7c3dd;padding:40px 0;font-size:14px}footer 
 <a class="job" href="#lien-he" data-job="Thợ đứng máy thêu"><div><h4>Thợ đứng máy thêu vi tính</h4><small>TP. Thủ Đức · Toàn thời gian · Có đào tạo</small></div><span class="go">Ứng tuyển →</span></a>
 <a class="job" href="#lien-he" data-job="Nhân viên QC & đóng gói"><div><h4>Nhân viên QC & đóng gói</h4><small>TP. Thủ Đức · Toàn thời gian</small></div><span class="go">Ứng tuyển →</span></a>
 <a class="job" href="#lien-he" data-job="Nhân viên thiết kế file thêu"><div><h4>Nhân viên thiết kế file thêu (Wilcom)</h4><small>TP. Thủ Đức · Toàn thời gian</small></div><span class="go">Ứng tuyển →</span></a>
-<a class="job" href="#lien-he" data-job="Etsy Seller"><div><h4>Etsy Seller</h4><small>TP. Thủ Đức · Toàn thời gian · Tiếng Anh đọc hiểu</small></div><span class="go">Ứng tuyển →</span></a>
+<a class="job has-jd" href="#etsy-seller" data-jd="jd-etsy-seller"><div><h4>Etsy Seller<span class="badge">Xem JD</span></h4><small>TP. Thủ Đức · Toàn thời gian · 10 – 15 triệu + % hoa hồng</small></div><span class="go">Xem chi tiết →</span></a>
 <a class="job" href="#lien-he" data-job="Quản lý sản xuất"><div><h4>Quản lý sản xuất</h4><small>TP. Thủ Đức · Toàn thời gian</small></div><span class="go">Ứng tuyển →</span></a>
 </div></div>
 </div></section>
@@ -163,6 +177,12 @@ footer{background:var(--ink);color:#b7c3dd;padding:40px 0;font-size:14px}footer 
 <button class="btn pri" style="justify-content:center;border:0;cursor:pointer">Gửi thông tin →</button>
 </form></div></div></section>
 
+<template id="jd-etsy-seller" data-job="Etsy Seller" data-title="Etsy Seller (Nhân viên kinh doanh sàn Etsy)"><div class="jdmeta"><div><small>Hình thức</small><b>Toàn thời gian, làm việc tại văn phòng</b></div><div><small>Báo cáo cho</small><b>Leader kinh doanh</b></div><div><small>Địa điểm</small><b>Số 48, đường 8A, Phường An Khánh, Quận 2 (cũ), Tp.Thủ Đức</b></div><div><small>Kinh nghiệm</small><b>Từ 1 năm trở lên (sàn TMĐT / digital marketing)</b></div><div><small>Thu nhập</small><b>10 – 15 triệu + % hoa hồng</b></div></div><h4>Giới thiệu</h4><p>Getify là công ty thương mại điện tử chuyên thiết kế, sản xuất và kinh doanh sản phẩm may mặc và thủ công, phân phối trực tiếp tại các thị trường Mỹ, Canada, châu Âu và Úc — mang đến những sản phẩm độc đáo, chất lượng cao cho người dùng quốc tế. Với định hướng xây dựng và phát triển các thương hiệu thương mại điện tử quốc tế, chúng tôi không ngừng mở rộng danh mục sản phẩm và thị trường. Đội ngũ Getify được xây dựng trên nền tảng chính trực, tự chủ, hiệu suất và sáng tạo — mang đến môi trường làm việc năng động, chuyên nghiệp nơi mỗi thành viên được tự chủ đóng góp và phát triển cùng công ty.</p><h4>Mục tiêu vị trí</h4><ul><li>Phụ trách kinh doanh store Etsy bán cho thị trường quốc tế (chủ yếu Mỹ).</li><li>Tự ra quyết định kinh doanh cho store trong định hướng chung của leader: chọn niche, idea, giá bán, listing, quảng cáo.</li><li>Chịu trách nhiệm chính về doanh số, lợi nhuận và hiệu quả quảng cáo của store mình phụ trách.</li></ul><h4>Mô tả công việc</h4><h5>1. Nghiên cứu thị trường &amp; lên idea</h5><ul><li>Nghiên cứu nhu cầu thị trường trên Etsy, tìm niche và sản phẩm tiềm năng.</li><li>Lên idea sản phẩm dựa trên catalog của xưởng và các nhà fulfillment đối tác.</li><li>Đảm bảo idea không vi phạm chính sách Etsy, trademark, copyright trước khi gửi leader duyệt.</li><li>Gợi ý nguồn hàng, sản phẩm mới cho leader và bộ phận tìm nguồn hàng.</li></ul><h5>2. Tạo &amp; quản lý listing</h5><ul><li>Tạo listing hoàn chỉnh: title, tag, mô tả, thuộc tính, hình ảnh, video theo chuẩn SEO Etsy.</li><li>Khai báo đầy đủ thông tin listing lên hệ thống nội bộ để CS và bộ phận sản xuất sử dụng; cập nhật ngay khi có thay đổi.</li><li>Đảm bảo số lượng listing mới theo kế hoạch hàng tháng.</li><li>Bật/tắt, chỉnh sửa listing dựa trên số liệu và phản hồi từ CS.</li></ul><h5>3. Giá bán &amp; khuyến mãi</h5><ul><li>Tự quyết định giá bán, chiến lược giá, giảm giá, promotion, coupon.</li><li>Tính ROAS hoà vốn cho từng listing từ giá vốn (COGS) do các bộ phận cung cấp, đảm bảo đúng quy tắc giá của công ty.</li></ul><h5>4. Quảng cáo (Etsy Ads)</h5><ul><li>Chạy và tối ưu Etsy Ads; phân bổ ngân sách giữa các listing trong mức đã được duyệt.</li><li>Theo dõi ROAS, chi phí/đơn; tắt hoặc sửa listing chạy lỗ.</li><li>Đề xuất tăng/giảm ngân sách ads hàng tháng kèm số liệu.</li></ul><h5>5. Theo dõi chỉ số &amp; báo cáo</h5><ul><li>Theo dõi hàng tuần: lượt xem, tỷ lệ chuyển đổi, ROAS, đơn hàng, lợi nhuận theo listing và theo store.</li><li>Báo cáo tuần/tháng cho leader.</li></ul><h5>6. Phối hợp</h5><ul><li>Làm việc với CS để xử lý phản hồi khách liên quan đến listing; hỗ trợ CS khi CS vắng.</li><li>Phối hợp với bộ phận sản xuất/QC và nhà fulfillment khi có thay đổi sản phẩm.</li></ul><h4>Yêu cầu ứng viên</h4><ul><li>Tối thiểu 1 năm kinh nghiệm trong lĩnh vực sàn thương mại điện tử (Etsy, Amazon, Shopify, TikTok Shop, Shopee…) hoặc digital marketing (quảng cáo, SEO, content).</li><li>Hiểu về SEO / từ khoá và quảng cáo trả phí (Etsy Ads,TikTok Ads…); đọc và phân tích được các chỉ số CTR, tỷ lệ chuyển đổi, ROAS.</li><li>Biết tính giá vốn, lợi nhuận, ROAS; làm việc tốt với số liệu và Google Sheets/Excel.</li><li>Có hiểu biết về trademark, copyright; tuân thủ chính sách của sàn.</li><li>Tiếng Anh đọc – viết khá (viết listing, nghiên cứu thị trường Mỹ).</li><li>Chủ động, có tư duy kinh doanh, chịu trách nhiệm với kết quả.</li></ul><h4>Ưu tiên ứng viên</h4><ul><li>Có kinh nghiệm bán hàng trên Etsy (đặc biệt sản phẩm handmade, POD, cá nhân hoá).</li><li>Đã từng quản lý store / gian hàng có doanh số ổn định.</li><li>Biết dùng các công cụ nghiên cứu Etsy (eRank, Marmalead, EverBee…) và AI hỗ trợ tạo nội dung, hình ảnh.</li></ul><h4>Quyền lợi</h4><ul><li>Thu nhập: 10 – 15 triệu + % hoa hồng theo lợi nhuận store hàng tháng.</li><li>Lương tháng 13.</li><li>Đóng BHXH đầy đủ theo quy định.</li><li>Được tự chủ quyết định kinh doanh cho store mình phụ trách.</li><li>Có sẵn xưởng sản xuất, team CS và QC hỗ trợ; seller tập trung vào bán hàng.</li><li>Cung cấp thiết bị khi làm việc</li><li>Được đào tạo về Etsy và sản phẩm của công ty nếu chưa có kinh nghiệm Etsy.</li></ul><h4>Thời gian làm việc</h4><ul><li>Thứ 2 – Thứ 6: 8h30 – 17h30 (nghỉ trưa 12h – 13h).</li><li>Thứ 7: làm việc buổi sáng 8h30 – 12h.</li></ul></template>
+<div class="modal" id="modal" onclick="if(event.target===this)closeJD()"><div class="mbox" role="dialog" aria-modal="true">
+<button class="mx" onclick="closeJD()" aria-label="Đóng">×</button>
+<span class="tag">Đang tuyển</span><h3 id="mt"></h3><div id="mc" class="jd"></div>
+<div class="mfoot"><a href="#lien-he" class="btn pri" id="mapply">Ứng tuyển vị trí này →</a><span>Hoặc gửi CV về <a href="mailto:hr@getifyco.com">hr@getifyco.com</a> · Zalo 0979 542 427</span></div>
+</div></div>
 <footer><div class="wrap"><span>© <span id="y"></span> GETIFY. Sản phẩm cá nhân hóa làm tại Việt Nam.</span><span>TP. Hồ Chí Minh, Việt Nam</span></div></footer>
 <script>
 const EMAIL="hr@getifyco.com";
@@ -172,8 +192,16 @@ document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.to,suf=el.dataset.suf||'',t0=performance.now(),from=el.dataset.plain?to-30:0;
 (function f(t){const p=Math.min((t-t0)/1400,1),v=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(f)})(t0);co.unobserve(el)}));
 
-document.querySelectorAll('.job').forEach(j=>j.onclick=()=>document.getElementById('job').value=j.dataset.job);
+document.querySelectorAll('.job:not(.has-jd)').forEach(j=>j.onclick=()=>document.getElementById('job').value=j.dataset.job);
 document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>document.getElementById('nav').classList.remove('open'));
 function send(e){e.preventDefault();const d=new FormData(e.target);
 location.href=`mailto:${EMAIL}?subject=${encodeURIComponent('[Ứng tuyển] '+d.get('job')+' - '+d.get('name'))}&body=${encodeURIComponent('Họ tên: '+d.get('name')+'\nLiên hệ: '+d.get('contact')+'\nVị trí: '+d.get('job')+'\n\n'+d.get('msg'))}`;return false}
+
+const M=document.getElementById('modal');
+function openJD(id,push){const t=document.getElementById(id);if(!t)return;document.getElementById('mt').textContent=t.dataset.title;document.getElementById('mc').innerHTML=t.innerHTML;document.getElementById('mapply').dataset.job=t.dataset.job;M.classList.add('open');document.body.classList.add('lock');M.scrollTop=0;if(push!==false)history.replaceState(null,'','#'+id.replace(/^jd-/,''))}
+function closeJD(){M.classList.remove('open');document.body.classList.remove('lock');if(location.hash&&document.getElementById('jd-'+location.hash.slice(1)))history.replaceState(null,'',location.pathname)}
+document.querySelectorAll('.job.has-jd').forEach(j=>j.onclick=e=>{e.preventDefault();openJD(j.dataset.jd)});
+document.getElementById('mapply').onclick=e=>{document.getElementById('job').value=e.currentTarget.dataset.job;closeJD()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJD()});
+if(location.hash&&document.getElementById('jd-'+location.hash.slice(1)))openJD('jd-'+location.hash.slice(1),false);
 </script></body></html>
