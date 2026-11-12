@@ -54,7 +54,7 @@ section{padding:110px 0}
 .st{text-align:center;position:relative;padding:0 8px}.st b{display:grid;place-items:center;width:54px;height:54px;margin:0 auto 12px;border-radius:50%;background:var(--ink);border:2px solid var(--thread2);font-size:22px}
 .st h4{font-size:15px}.st p{font-size:13px;color:#b9bfcc}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.s .mk{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.s .mk span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px}
-.s{background:var(--linen);border-radius:20px;padding:30px 26px}.s .num{font-size:30px;font-weight:700;color:var(--thread);line-height:1}
+.s{background:var(--linen);border-radius:20px;padding:30px 26px}.s .big{font-size:30px;font-weight:700;color:var(--thread);line-height:1}
 .s p{margin-top:10px;color:var(--muted);font-size:15px}
 .career{background:var(--linen)}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
@@ -121,9 +121,9 @@ footer{background:var(--ink);color:#b9bfcc;padding:40px 0;font-size:14px}footer 
 <section id="nang-luc"><div class="wrap">
 <div class="head center rv"><h2>Năng lực của chúng tôi</h2><hr class="stitch"></div>
 <div class="stats">
-<div class="s rv"><div class="num">Tự sản xuất</div><p>Thiết kế, thêu, kiểm tra và đóng gói ngay tại Việt Nam, chủ động chất lượng và thời gian.</p></div>
-<div class="s rv"><div class="num">Đa kênh</div><p>Bán qua website thương hiệu và các sàn thương mại điện tử quốc tế.</p></div>
-<div class="s rv"><div class="num">Toàn cầu</div><p>Phục vụ khách hàng tại các thị trường quốc tế.</p><div class="mk"><span>🇺🇸 Mỹ</span><span>🇨🇦 Canada</span><span>🇦🇺 Úc</span><span>🇬🇧 Anh</span><span>🇪🇺 Châu Âu</span></div></div>
+<div class="s rv"><div class="num big">Tự sản xuất</div><p>Thiết kế, thêu, kiểm tra và đóng gói ngay tại Việt Nam, chủ động chất lượng và thời gian.</p></div>
+<div class="s rv"><div class="num big">Đa kênh</div><p>Bán qua website thương hiệu và các sàn thương mại điện tử quốc tế.</p></div>
+<div class="s rv"><div class="num big">Toàn cầu</div><p>Phục vụ khách hàng tại các thị trường quốc tế.</p><div class="mk"><span>🇺🇸 Mỹ</span><span>🇨🇦 Canada</span><span>🇦🇺 Úc</span><span>🇬🇧 Anh</span><span>🇪🇺 Châu Âu</span></div></div>
 </div></div></section>
 
 <section class="career" id="tuyen-dung"><div class="wrap cgrid">
@@ -170,7 +170,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';io.observe(el)});
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.to,suf=el.dataset.suf||'',t0=performance.now(),from=el.dataset.plain?to-30:0;
 (function f(t){const p=Math.min((t-t0)/1400,1),v=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(f)})(t0);co.unobserve(el)}));
-document.querySelectorAll('.num').forEach(n=>co.observe(n));
+
 document.querySelectorAll('.job').forEach(j=>j.onclick=()=>document.getElementById('job').value=j.dataset.job);
 document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>document.getElementById('nav').classList.remove('open'));
 function send(e){e.preventDefault();const d=new FormData(e.target);
