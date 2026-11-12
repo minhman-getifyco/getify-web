@@ -53,8 +53,8 @@ section{padding:110px 0}
 .flow::before{content:"";position:absolute;top:26px;left:8%;right:8%;height:2px;background:repeating-linear-gradient(90deg,var(--thread2) 0 8px,transparent 8px 14px)}
 .st{text-align:center;position:relative;padding:0 8px}.st b{display:grid;place-items:center;width:54px;height:54px;margin:0 auto 12px;border-radius:50%;background:var(--ink);border:2px solid var(--thread2);font-size:22px}
 .st h4{font-size:15px}.st p{font-size:13px;color:#b9bfcc}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.s{background:var(--linen);border-radius:20px;padding:30px 26px}.s .num{font-size:46px;font-weight:700;color:var(--thread);line-height:1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.s .mk{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.s .mk span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px}
+.s{background:var(--linen);border-radius:20px;padding:30px 26px}.s .num{font-size:30px;font-weight:700;color:var(--thread);line-height:1}
 .s p{margin-top:10px;color:var(--muted);font-size:15px}
 .career{background:var(--linen)}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
@@ -75,7 +75,7 @@ footer{background:var(--ink);color:#b9bfcc;padding:40px 0;font-size:14px}footer 
 .rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
 .todo{background:#fff3c4;outline:1px dashed #d9a400;border-radius:4px;padding:0 4px}
 @media(max-width:900px){nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 24px;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}
-.hero .grid,.cgrid,.contact .grid{grid-template-columns:1fr}.prods,.stats{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr}
+.hero .grid,.cgrid,.contact .grid{grid-template-columns:1fr}.prods{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}
 .flow{grid-template-columns:repeat(3,1fr);row-gap:30px}.flow::before{display:none}section{padding:80px 0}.perks{grid-template-columns:1fr}}
 @media(max-width:520px){.prods,.stats{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}}
 </style></head><body>
@@ -119,12 +119,11 @@ footer{background:var(--ink);color:#b9bfcc;padding:40px 0;font-size:14px}footer 
 </div></div></section>
 
 <section id="nang-luc"><div class="wrap">
-<div class="head center rv"><h2>Năng lực thực tế</h2><hr class="stitch"></div>
+<div class="head center rv"><h2>Năng lực của chúng tôi</h2><hr class="stitch"></div>
 <div class="stats">
-<div class="s rv"><div class="num" data-to="6">0</div><p>Máy thêu vi tính đang vận hành</p></div>
-<div class="s rv"><div class="num" data-to="50" data-suf="+">0</div><p>Sản phẩm hoàn thiện mỗi ngày</p></div>
-<div class="s rv"><div class="num" data-to="5">0</div><p>Thị trường: Mỹ, Canada, Úc, Anh, châu Âu</p></div>
-<div class="s rv"><div class="num" data-to="2024" data-plain="1">0</div><p>Năm thành lập pháp nhân quốc tế</p></div>
+<div class="s rv"><div class="num">Tự sản xuất</div><p>Thiết kế, thêu, kiểm tra và đóng gói ngay tại Việt Nam, chủ động chất lượng và thời gian.</p></div>
+<div class="s rv"><div class="num">Đa kênh</div><p>Bán qua website thương hiệu và các sàn thương mại điện tử quốc tế.</p></div>
+<div class="s rv"><div class="num">Toàn cầu</div><p>Phục vụ khách hàng tại các thị trường quốc tế.</p><div class="mk"><span>🇺🇸 Mỹ</span><span>🇨🇦 Canada</span><span>🇦🇺 Úc</span><span>🇬🇧 Anh</span><span>🇪🇺 Châu Âu</span></div></div>
 </div></div></section>
 
 <section class="career" id="tuyen-dung"><div class="wrap cgrid">
